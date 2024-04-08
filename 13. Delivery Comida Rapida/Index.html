@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>13. Delivery Comida Rapida</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>ENCOMIENDAS DE COMIDA RAPIDA</h1>
+                    <p>Registra la información para el pedido de tu comida.</p>
+                </div>
+
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" class="form-control item" name="full_name" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" class="form-control item" name="address" placeholder="Ingresa tu dirección" required>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" class="form-control item" name="phone" placeholder="Ingresa tu numero celular" required>
+                </div>
+
+                <h2>ORDEN</h2>
+                <div class="form-group">
+                    <table class="table">
+                        <thead>
+                            <div>
+                                <tr>
+                                    <th style=" border: inset 0pt">PRODUCTO</th>
+                                    <th style=" border: inset 0pt">PRECIO (USD)</th>
+                                    <th style=" border: inset 0pt">CANTIDAD DEL PRODUCTO</th>
+                                </tr>
+                            </div>
+                        </thead>
+                        <tbody>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>Helado</label>
+                                    </td>
+                                    <td>
+                                        <label>$ 2.30</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control item" name="ice_cream" placeholder="Ingresa la cantidad" min="0" max="250" required>
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>Palomitas</label>
+                                    </td>
+                                    <td>
+                                        <label>$ 5.80</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control item" name="pop_corn" placeholder="Ingresa la cantidad" min="0" max="250" required>
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>Coca Cola</label>
+                                    </td>
+                                    <td>
+                                        <label>$ 1.60</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control item" name="coca_cola" placeholder="Ingresa la cantidad" min="0" max="250" required>
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>Cafe</label>
+                                    </td>
+                                    <td>
+                                        <label>$ 2.00</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control item" name="coffee" placeholder="Ingresa la cantidad" min="0" max="250" required>
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>Perro Caliente</label>
+                                    </td>
+                                    <td>
+                                        <label>$ 4.50</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control item" name="hot_dog" placeholder="Ingresa la cantidad" min="0" max="250" required>
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>Hamburguesa</label>
+                                    </td>
+                                    <td>
+                                        <label>$ 7.60</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control item" name="hamburger" placeholder="Ingresa la cantidad" min="0" max="250" required>
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>Papas Fritas</label>
+                                    </td>
+                                    <td>
+                                        <label>$ 3.30</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control item" name="french_fries" placeholder="Ingresa la cantidad" min="0" max="250" required>
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>Pizza</label>
+                                    </td>
+                                    <td>
+                                        <label>$ 9.70</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control item" name="pizza" placeholder="Ingresa la cantidad" min="0" max="250" required>
+                                    </td>
+                                </tr>
+                            </div>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

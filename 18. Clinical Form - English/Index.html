@@ -1,0 +1,78 @@
+    <h1>MEDICAL FORM</h1>
+    <p>Fill in the patient's information.</p>
+
+<form>
+    <h2>PERSONAL INFORMATION</h2>
+    <div>
+        <label>Full Name</label>
+        <input type="text" id="full-name" placeholder="Enter full name" required>
+    </div><br>
+    <div>
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter email" required>
+    </div><br>
+    <div>
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter the cell phone number" required>
+
+    <!--NUMERO ESTADOUNIDENSE-->
+        <script>document.getElementById('phone').addEventListener('input', function (number) {
+            var x = number.target.value.replace(/\D/g, '').match(/(\d{1})(\d{0,3})(\d{0,3})(\d{0,4})/);
+            number.target.value = '+1 ' + x[2] + (x[3] ? '-' + x[3] : '') + (x[4] ? '-' + x[4] : '');
+        });</script>
+<!--
+        NUMERO COLOMBIANO
+        
+        <script>document.getElementById('phone').addEventListener('input', function (number) {
+            var x = number.target.value.replace(/\D/g, '').match(/(\d{2})(\d{0,3})(\d{0,7})/);
+            number.target.value = '+57 ' + x[2] + (x[3] ? ' ' + x[3] : '') + (x[7] ? ' ' + x[7] : '');
+        });</script>
+-->
+    </div><br>
+    <div>
+        <label>Gender</label>
+        <select required>
+            <option value="" disabled selected>Select an option</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </div><br>
+    <div>
+        <label>Hight (CM)</label>
+        <input type="number" id="cm" placeholder="Enter the hight" max="500" required>
+    </div><br>
+    <div>
+        <label>Weight (KG)</label>
+        <input type="number" id="kg" placeholder="Enter the weight" max="500" required>
+    </div>
+
+    <h2>FAMILY CONTACT</h2>
+    <div>
+        <label>Father's Full Name</label>
+        <input type="text" id="father-name" placeholder="Enter father's full name" required>
+    </div><br>
+    <div>
+        <label>Email</label>
+        <input type="email" id="father-email" placeholder="Enter email" required>
+    </div><br>
+    <div>
+        <label>Phone Number</label>
+        <input type="tel" id="father-phone" placeholder="Enter the cell phone number" required>
+    </div><br>
+    <div>
+        <label>Mother's Full Name</label>
+        <input type="text" id="mother-name" placeholder="Enter mother's full name" required>
+    </div><br>
+    <div>
+        <label>Email</label>
+        <input type="email" id="mother-email" placeholder="Enter email" required>
+    </div><br>
+    <div>
+        <label>Phone Number</label>
+        <input type="tel" id="mother-phone" placeholder="Enter the cell phone number" required>
+    </div><br>
+
+    <div>
+        <button type="submit" id="finished">Enviar</button>
+    </div>
+</form>

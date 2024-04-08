@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>05. Inscripcion a Gimnasio</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>REGISTRO A GIMNASIO</h1>
+                    <p>Registra la información para ser miembro al gimnasio.</p>
+                </div>
+
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" class="form-control item" name="full_name" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" class="form-control item" name="phone" placeholder="Ingresa tu numero celular" required>
+                </div>
+                <div class="form-group">
+                    <label>Edad</label>
+                    <input type="number" class="form-control item" name="age" placeholder="Ingresa tu edad" min="17" max="45" required>
+                </div>
+
+                <h2>SERVICIOS</h2>
+                <div class="form-group">
+                    <label>Plan de Membresía</label><br>
+                    <input type="radio" id="basic" name="membership_plan" required>
+                    <label for="basic">Basico</label>
+                    <span class="spanbox"></span>
+                    <input type="radio" id="standard" name="membership_plan">
+                    <label for="standard">Estandar</label>
+                    <span class="spanbox"></span>
+                    <input type="radio" id="premium" name="membership_plan">
+                    <label for="premium">Premium</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Tiempo de Membresía</label><br>
+                    <input type="radio" id="monthly" name="membership_time" required>
+                    <label for="monthly">Mensual</label>
+                    <span class="spanbox"></span>
+                    <input type="radio" id="quarterly" name="membership_time">
+                    <label for="quarterly">Trimestral</label>
+                    <span class="spanbox"></span>
+                    <input type="radio" id="annual" name="membership_time">
+                    <label for="annual">Anual</label>
+                </div>
+
+                <label>Servicios Adicionales (Opcional)</label>
+                <div class="form-group">
+                    <input type="checkbox" value="Si" id="personal_training" name="personal_training">
+                    <label for="personal_training">Entrenamiento Personal</label><br>
+                    <input type="checkbox" value="Si" id="group_classes" name="group_classes">
+                    <label for="group_classes">Clases Grupales</label>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

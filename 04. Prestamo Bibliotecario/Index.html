@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>04. Prestamo Bibliotecario</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>PRESTAMO DE LA BIBLIOTECA</h1>
+                    <p>Registra tu información para realizar un prestamo periodico de algun libro.</p>
+                </div>
+
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" class="form-control item" name="full_name" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" class="form-control item" name="phone" placeholder="Ingresa tu numero celular" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" class="form-control item" name="email" placeholder="Ingresa tu correo electronico" required>
+                </div>
+
+                <h2>CARACTERISTICAS DEL LIBRO</h2>
+                <div class="form-group">
+                    <label>Titulo</label>
+                    <input type="text" class="form-control item" name="tittle" placeholder="Ingresa el titulo del libro" required>
+                </div>
+                <div class="form-group">
+                    <label>Autor</label>
+                    <input type="text" class="form-control item" name="autor" placeholder="Ingresa el autor del libro" required>
+                </div>
+                <div class="form-group">
+                    <label>Codigo del Libro</label>
+                    <input type="number" class="form-control item" name="code" placeholder="Ingresa el codigo del libro" required>
+                </div>
+                <div class="form-group">
+                    <label>Periodo de Prestamo</label>
+                    <select class="form-control item" name="time_frame" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>7 Dias</option>
+                        <option>14 Dias</option>
+                        <option>21 Dias</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

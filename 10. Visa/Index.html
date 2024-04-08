@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>10. Visa</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>SOLICITUD DE VISA</h1>
+                    <p>Registra la información para autorización del visado.</p>
+                </div>
+
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" class="form-control item" name="full_name" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Nacimiento</label>
+                    <input type="date" class="form-control item" name="birth" required>
+                </div>
+                <div class="form-group">
+                    <label>Nacionalidad</label>
+                    <input type="text" class="form-control item" name="nationality" placeholder="Ingresa la nacionalidad" required>
+                </div>
+                <div class="form-group">
+                    <label>Numero de Pasaporte</label>
+                    <input type="number" class="form-control item" name="passport" placeholder="Ingresa el numero de tu pasaporte" required>
+                </div>
+
+                <h2>INFORMACIÓN DE CONTACTO</h2>
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" class="form-control item" name="address" placeholder="Ingresa tu dirección" required>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" class="form-control item" name="phone" placeholder="Ingresa tu numero celular" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" class="form-control item" name="email" placeholder="Ingresa tu correo electronico" required>
+                </div>
+
+                <h2>DETALLES DEL VIAJE</h2>
+                <div class="form-group">
+                    <label>Propósito del Viaje</label>
+                    <textarea name="purpose" class="form-control item" placeholder="Razon del viaje" maxlength="2000" cols="50" rows="7" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Duración de la Estancia</label>
+                    <select class="form-control item" name="date_stay" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>Dias</option>
+                        <option>Meses</option>
+                        <option>Años</option>
+                    </select>
+                    <input type="number" class="form-control item" name="duration_stay" placeholder="Ingresa el tiempo de estadia" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label>Fecha Predefinida del Viaje</label>
+                    <label>Cronograma Prevista de Llegada</label>
+                    <input type="date" class="form-control item" name="start" required>
+                    <label>Cronograma Prevista de Salida</label>
+                    <input type="date" class="form-control item" name="end" required>
+                </div>
+
+                <h2>ANEXO DE DOCUMENTOS</h2>
+                <div class="form-group">
+                    <label>Documento de Identidad</label>
+                    <input type="file" class="button_file" id="file_cc" name="file_cc" accept="image/*, .pdf" multiple>
+                    <label for="file_cc">El tamaño máximo de imagen o PDF es de 5MB.</label>
+                </div>
+                <div class="form-group">
+                    <label>Pasaporte</label>
+                    <input type="file" class="button_file" id="file_passport" name="file_passport" accept="image/*, .pdf" multiple>
+                    <label for="file_passport">El tamaño máximo de imagen o PDF es de 5MB.</label>
+                </div>
+                <div class="form-group">
+                    <label>Fotografía</label>
+                    <input type="file" class="button_file" id="file_profile" name="file_profile" accept="image/*, .pdf" multiple>
+                    <label for="file_profile">El tamaño máximo de imagen o PDF es de 5MB.</label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

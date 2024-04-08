@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>14. Tabla de Asistencia</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>TABLA DE ASISTENCIA</h1>
+                    <p>Rellena la tabla de asistencias de la clase actual.</p>
+                </div>
+
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-group">
+                    <label>Profesor</label>
+                    <input type="text" class="form-control item" name="teacher" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Salon</label>
+                    <input type="text" class="form-control item" name="class" placeholder="Ingresa el curso" required>
+                </div>
+                <div class="form-group">
+                    <label>Fecha Actual</label>
+                    <input  type="date" class="form-control item" id="today" name="today" required>
+                    <script>document.getElementById('today').valueAsDate = new Date();</script>
+                </div>
+                
+                <h2>TABLA</h2>
+                <div class="form-group">
+                    <table class="table">
+                        <thead>
+                            <div>
+                                <tr>
+                                    <th style=" border: inset 0pt">N°</th>
+                                    <th style=" border: inset 0pt">Nombre Completo</th>
+                                    <th style=" border: inset 0pt">Estatus</th>
+                                    <th style=" border: inset 0pt">Asistencia</th>
+                                </tr>
+                            </div>
+                        </thead>
+                        <tbody>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>1</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control item" name="student1" placeholder="Ingresa el nombre completo" >
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="status1" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Estudiante</option>
+                                            <option>Practicante</option>
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="attendance1" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Falla</option>
+                                            <option>Tarde</option>
+                                            <option>Asitió</option>
+                                        </select>    
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>2</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control item" name="student2" placeholder="Ingresa el nombre completo" >
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="status2" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Estudiante</option>
+                                            <option>Practicante</option>
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="attendance2" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Falla</option>
+                                            <option>Tarde</option>
+                                            <option>Asitió</option>
+                                        </select>    
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>3</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control item" name="student3" placeholder="Ingresa el nombre completo" >
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="status3" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Estudiante</option>
+                                            <option>Practicante</option>
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="attendance3" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Falla</option>
+                                            <option>Tarde</option>
+                                            <option>Asitió</option>
+                                        </select>    
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>4</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control item" name="student4" placeholder="Ingresa el nombre completo" >
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="status4" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Estudiante</option>
+                                            <option>Practicante</option>
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="attendance4" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Falla</option>
+                                            <option>Tarde</option>
+                                            <option>Asitió</option>
+                                        </select>    
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>5</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control item" name="student5" placeholder="Ingresa el nombre completo" >
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="status5" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Estudiante</option>
+                                            <option>Practicante</option>
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="attendance5" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Falla</option>
+                                            <option>Tarde</option>
+                                            <option>Asitió</option>
+                                        </select>    
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>6</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control item" name="student6" placeholder="Ingresa el nombre completo" >
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="status6" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Estudiante</option>
+                                            <option>Practicante</option>
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="attendance6" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Falla</option>
+                                            <option>Tarde</option>
+                                            <option>Asitió</option>
+                                        </select>    
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>7</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control item" name="student7" placeholder="Ingresa el nombre completo" >
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="status7" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Estudiante</option>
+                                            <option>Practicante</option>
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="attendance7" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Falla</option>
+                                            <option>Tarde</option>
+                                            <option>Asitió</option>
+                                        </select>    
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>8</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control item" name="student8" placeholder="Ingresa el nombre completo" >
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="status8" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Estudiante</option>
+                                            <option>Practicante</option>
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="attendance8" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Falla</option>
+                                            <option>Tarde</option>
+                                            <option>Asitió</option>
+                                        </select>    
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>9</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control item" name="student9" placeholder="Ingresa el nombre completo" >
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="status9" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Estudiante</option>
+                                            <option>Practicante</option>
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="attendance9" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Falla</option>
+                                            <option>Tarde</option>
+                                            <option>Asitió</option>
+                                        </select>    
+                                    </td>
+                                </tr>
+                            </div>
+                            <div>
+                                <tr>
+                                    <td>
+                                        <label>10</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control item" name="student10" placeholder="Ingresa el nombre completo" >
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="status10" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Estudiante</option>
+                                            <option>Practicante</option>
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <select class="form-control item" name="attendance10" >
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option>Falla</option>
+                                            <option>Tarde</option>
+                                            <option>Asitió</option>
+                                        </select>    
+                                    </td>
+                                </tr>
+                            </div>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

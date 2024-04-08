@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>11. Donacion de Sangre</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>DONACIÓN DE SANGRE</h1>
+                    <p>Rellena el formulario si deseas donar sangre a esta campaña.</p>
+                </div>
+
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" class="form-control item" name="full_name" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" class="form-control item" name="phone" placeholder="Ingresa tu numero celular" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" class="form-control item" name="email" placeholder="Ingresa tu correo electronico" required>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Sangre</label>
+                    <select class="form-control item" name="blood" required>
+                        <option value="" disabled selected>Seleccione tu posición</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Comentarios</label>
+                    <textarea name="comments" class="form-control item" placeholder="Nota adiccional" maxlength="2000" cols="50" rows="7"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>09. Guarderia Canina</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>GUARDERÍA CANINA</h1>
+                    <p>Rellena los datos para el alojamiento de tu mascota.</p>
+                </div>
+
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" class="form-control item" name="full_name" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" class="form-control item" name="email" placeholder="Ingresa tu correo electronico" required>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" class="form-control item" name="phone" placeholder="Ingresa tu numero celular" required>
+                </div>
+                <div class="form-group">
+                    <label>Fecha y Hora</label>
+                    <label>Entrega Preferida</label>
+                    <input type="datetime-local" class="form-control item" name="start" required>
+                    <label>Recogida Preferida</label>
+                    <input type="datetime-local" class="form-control item" name="end" required>
+                </div>
+
+                <h2>DATOS DE LA MASCOTA</h2>
+                <div class="form-group">
+                    <label>Nombre de la Mascota</label>
+                    <input type="text" class="form-control item" name="dog_name" placeholder="Ingresa el nombre de tu mascota" required>
+                </div>
+                <div class="form-group">
+                    <label>Raza de la Mascota</label>
+                    <input type="text" class="form-control item" name="breed" placeholder="Ingresa la raza de tu mascota" required>
+                </div>
+                <div class="form-group">
+                    <label>Edad</label>
+                    <select class="form-control item" name="age_date" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>Meses</option>
+                        <option>Años</option>
+                    </select>
+                    <input type="number" class="form-control item" name="age" placeholder="Ingresa la edad de tu mascota" min="1" max="30" required>
+                </div>
+                <div class="form-group">
+                    <label>Instrucciones o Notas Especiales</label>
+                    <textarea name="notes" class="form-control item" placeholder="Especifica instrucciones o cuidados especiales que necesite tu mascota" maxlength="2000" cols="50" rows="7"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

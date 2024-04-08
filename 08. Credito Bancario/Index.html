@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>08. Credito Bancario</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>CRÉDITO BANCARIO</h1>
+                    <p>Registra la información para realizar tu prestamo bancario.</p>
+                </div>
+
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-group">
+                    <label>Nombres</label>
+                    <input type="text" class="form-control item" name="names" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label>Apellidos</label>
+                    <input type="text" class="form-control item" name="surnames" placeholder="Ingresa tu apellido" required>
+                </div>
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" class="form-control item" name="address" placeholder="Ingresa tu dirección" required>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" class="form-control item" name="phone" placeholder="Ingresa tu numero celular" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" class="form-control item" name="email" placeholder="Ingresa tu correo electronico" required>
+                </div>
+                <div class="form-group">
+                    <label>Numero de Seguro Social</label>
+                    <input type="number" class="form-control item" name="ssn" placeholder="Ingresa tu SSN" required>
+                </div>
+
+                <h2>DETALLES DEL PRÉSTAMO</h2>
+                <div class="form-group">
+                    <label>Monto del Préstamo</label>
+                    <input type="number" class="form-control item" name="amount" placeholder="Ingresa la cantidad del monto" required>
+                </div>
+                <div class="form-group">
+                    <label>Proposito del crédito</label>
+                    <textarea name="purpose" class="form-control item" placeholder="Razon del crédito a sacar" maxlength="2000" cols="50" rows="7" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Plazo de pago deseado</label>
+                    <input type="date" class="form-control item" name="payment" required>
+                </div>
+
+                <h2>INFORMACIÓN DE EMPLEO</h2>
+                <div class="form-group">
+                    <label>Empresa</label>
+                    <input type="text" class="form-control item" name="company" placeholder="Nombre de la empresa" required>
+                </div>
+                <div class="form-group">
+                    <label>Ocupación</label>
+                    <input type="text" class="form-control item" name="job" placeholder="Ingresa tu puesto laboral" required>
+                </div>
+                <div class="form-group">
+                    <label>Ingreso Mensual</label>
+                    <input type="number" class="form-control item" name="income" placeholder="Ingresa los ingresos mensuales" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

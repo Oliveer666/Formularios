@@ -1,0 +1,39 @@
+    <h1>DENUNCIA A LA POLICIA</h1>
+    <p>Rellena la información para aplicar un formato de demanda.</p>
+
+<form>
+    <h2>DATOS PERSONALES</h2>
+    <div>
+        <label>Nombre Completo</label>
+        <input type="text" id="full-name" placeholder="Ingresa tu nombre completo" required>
+    </div><br>
+    <div>
+        <label>Correo</label>
+        <input type="email" id="email" placeholder="Ingresa tu correo electronico" required>
+    </div><br>
+    <div>
+        <label>Celular</label>
+        <input type="tel" id="phone" placeholder="Ingresa tu numero celular" required>
+    </div><br>
+
+    <h2>APELACIÓN</h2>
+    <div>
+        <label>Documento de Identidad</label><br>
+        <input type="number" id="CC" placeholder="Ingresa tu documento" required><br><br>
+        <input type="file" id="attachment" accept="image/*, .pdf" required><br>
+        <label>Puede adjuntar archivos de imagen o PDF. El tamaño máximo de archivo es de 5MB.</label>
+    </div><br>
+    <div>
+        <label>Descripción</label><br>
+        <textarea id="description" placeholder="Asunto del antecedente" maxlength="2000" cols="50" rows="7" required></textarea>
+    </div><br>
+    <div>
+        <label>Archivos Adjuntos</label>
+        <input type="file" id="attachment" multiple><br>
+        <label>El tamaño máximo de archivo es de 25MB.</label>
+    </div><br>
+
+    <div>
+        <button type="submit" id="finished">Enviar</button>
+    </div>
+</form>

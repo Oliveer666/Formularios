@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>03. PQRS</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>FORMULARIO PQRS</h1>
+                    <p>Informa mediante este formulario el PQRS especificando tu situación.</p>
+                </div>
+
+                <h2>DATOS</h2>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" class="form-control item" name="full_name" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" class="form-control item" name="email" placeholder="Ingresa tu correo electronico" required>
+                </div>
+
+                <h2>RAZÓN</h2>
+                <div class="form-group">
+                    <label>Categoria</label>
+                    <select class="form-control item" name="category" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>Petición</option>
+                        <option>Queja</option>
+                        <option>Reclamación</option>
+                        <option>Sugerencia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <textarea name="description" class="form-control item" placeholder="Describe la situación" maxlength="2000" cols="50" rows="7" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Archivos Adjuntos</label>
+                    <input type="file" class="button_file" id="attachment" accept="image/*, .pdf" multiple>
+                    <label for="attachment">El tamaño máximo de imagen o PDF es de 25MB.</label>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

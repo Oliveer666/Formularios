@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>01. Solicitud de Empleo</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>REGISTRO CURSO DE DANZA</h1>
+                    <p>Registra la información para participar en el curso semanal de danza.</p>
+                </div>
+                
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="full-name" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" id="email" placeholder="Ingresa tu correo electronico" required>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" id="phone" placeholder="Ingresa tu numero celular" required>
+                </div>
+
+                <h2>HABILIDADES</h2>
+                <p>¿Cual es tu nivel de aprendizaje?</p>
+                <div class="form-group">
+                    <label>Nivel de Habilidad</label>
+                    <input type="radio" id="beginner" name="skills" required>
+                    <label for="beginner">Aprendiz</label>
+                    <input type="radio" id="intermediate" name="skills">
+                    <label for="intermediate">Intermedio</label>
+                    <input type="radio" id="advanced" name="skills">
+                    <label for="advanced">Avanzado</label>
+                </div>
+
+                <p>¿Algun estilo de baile de tu preferencia?</p>
+                <div class="form-group">
+                    <input type="radio" id="hip-hop" name="dances" required>
+                    <label for="hip-hop">Hip Hop</label>
+                    <input type="radio" id="breakdance" name="dances">
+                    <label for="breakdance">Breakdance</label>
+                    <input type="radio" id="jazz-dance" name="dances">
+                    <label for="jazz-dance">Jazz Dance</label>
+                    <input type="radio" id="kpop" name="dances">
+                    <label for="kpop">Kpop</label>
+                    <input type="radio" id="other" name="dances">
+                    <label for="other">Otro</label>
+                    <input type="text" id="otherdance" placeholder="¿Otro de tu preferencia?"> 
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

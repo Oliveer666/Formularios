@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>07. Reservacion a Hotel</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="registration-form">
+            <form method="post" action="controladores/base_de_datos.php">
+                <div class="form-title">
+                    <h1>RESERVACION DE HOTEL</h1>
+                    <p>Registra la información para hospedarde en nuestro hotel.</p>
+                </div>
+
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" class="form-control item" name="full_name" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" class="form-control item" name="email" placeholder="Ingresa tu correo electronico" required>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" class="form-control item" name="phone" placeholder="Ingresa tu numero celular" required>
+                </div>
+
+                <h2>HABITACIONES</h2>
+                <div class="form-group">
+                    <label>Numero de Habitadiones</label>
+                    <select class="form-control item" name="rooms" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Numero de Invitados en la Habitacion #1</label>
+                    <select class="form-control item" name="room01" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Numero de Invitados en la Habitacion #2</label>
+                    <select class="form-control item" name="room02" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>Ninguno</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Numero de Invitados en la Habitacion #3</label>
+                    <select class="form-control item" name="room03" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>Ninguno</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Tiempo de Hospedaje</label><br>
+                    Desde <input type="date" class="form-control item" name="start" required>
+                    Hasta <input type="date" class="form-control item" name="end" required>
+                </div>
+                <div class="form-group">
+                    <label>Comentarios</label>
+                    <textarea name="comments" class="form-control item" placeholder="Nota adiccional" maxlength="2000" cols="50" rows="7"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="finished" class="btn btn-block create-account">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
