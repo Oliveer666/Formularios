@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(225,225,225);
+    font-family: Helvetica;
+}
+
+.paragraph{
+    font-size: 17px;
+}
+
+.registration-form{
+	padding: 50px 0;
+}
+
+.registration-form form{
+    background-color: #ffffff;
+    max-width: 700px;
+    margin: auto;
+    padding: 50px 70px;
+    border-radius: 30px;
+    box-shadow: 0px 1px 50px rgba(0, 0, 0, 0.150);
+}
+
+.registration-form .form-title{
+	text-align: center;
+    margin: auto;
+    margin-bottom: 25px;
+    line-height: 20px;
+}
+
+.registration-form .item{
+	border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 7px 20px 7px;
+}
+
+.registration-form .create-account{
+    border-radius: 10px;
+    padding: 9px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: rgb(25, 25, 25);
+    color: white;
+    margin-top: 30px;
+}
+
+.button_icon{
+    color: rgb(25, 25, 25);
+    padding: 12px 2px 1px;
+}    
+
+/*
+<div class="sections">
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+            </svg>
+        </a>
+        <div class="sections-box">  
+            <a href="#" class="sections-box active">1</a>
+        </div>
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+            </svg>
+        </a>
+</div>
+
+.sections{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; 
+}
+.sections a{
+    background-color: rgb(25, 25, 25);
+    border-radius: 10px;
+    border: rgba(0, 0, 0, 0.180) 2px solid;
+    color: rgb(255, 255, 255);
+    line-height: 20px;
+    display:inline-block;
+    margin-right:5px;
+    padding: 3px 3px 1px;
+}
+
+.sections a:hover{
+    background:#ffffff;
+    color: rgb(25, 25, 25);
+}
+
+.sections-box a{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; 
+    padding: 12px 15px 12px;
+}
+*/
