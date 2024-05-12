@@ -1,5 +1,12 @@
-VISTA PREVIA DE HTML EN GITHUB
+Proyectos Universitarios de HTML, PHP y SQL
 -------------------------------
+
+Este repositorio contiene una colección de mis pequeños proyectos cortos realizados durante mis clases universitarias de HTML, PHP y SQL.
+
+Cada proyecto está diseñado para practicar y aprender los conceptos básicos de desarrollo web y bases de datos. Siéntete libre de explorar los proyectos y contribuir si lo deseas.
+
+## VISTA PREVIA DE HTML EN GITHUB
+
 
 Muchos repositorios de GitHub no utilizan GitHub Pages para renderizar esos archivos sin necesidad de clonar o descargar repositorios completos.
 
