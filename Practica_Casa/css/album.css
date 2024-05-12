@@ -1,0 +1,27 @@
+.text-justify {
+  text-align: justify;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-widget-heading h5 {
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .footer-widget-heading h5::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    width: 50px;
+    background: #ffffff;
+  }
+.footer-widget ul li {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 20px;
+}
+  

@@ -1,12 +1,6 @@
-<script src="../js/sweetalert2@11.js"></script>
-<style>
-        body {
-            color: #999999;
-        }
-</style>.
-
+<script src="../../js/sweetalert2@11.js"></script>.
 <?php
-    require "../config/conexion.php";
+    require "../../config/conexion.php";
 
     $nombre_completo = $_POST["text_name"];
     $documento = $_POST["cc_document"];
@@ -27,7 +21,7 @@
             confirmButtonText: 'Aceptar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../Index.html';
+                window.location.href = '../../Index.html';
             }
         });
         </script>";
@@ -41,7 +35,7 @@
             confirmButtonText: 'Aceptar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../Index.html';
+                window.location.href = '../../Index.html';
             }
         });
         </script>";

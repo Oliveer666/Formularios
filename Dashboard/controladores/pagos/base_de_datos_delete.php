@@ -1,12 +1,6 @@
-<script src="../js/sweetalert2@11.js"></script>
-<style>
-        body {
-            color: #999999;
-        }
-</style>.
-
+<script src="../../js/sweetalert2@11.js"></script>.
 <?php
-    require "../config/conexion.php";
+    require "../../config/conexion.php";
 
     $code = $_POST["text_code"];
 
@@ -21,7 +15,7 @@
             confirmButtonText: 'Aceptar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../Delete.html';
+                window.location.href = '../../Delete.html';
             }
         });
         </script>";
@@ -35,7 +29,7 @@
             confirmButtonText: 'Aceptar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../Delete.html';
+                window.location.href = '../../Delete.html';
             }
         });
         </script>";

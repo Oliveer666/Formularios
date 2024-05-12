@@ -1,29 +1,26 @@
 <script src="../js/sweetalert2@11.js"></script>
-<style>
-        body {
-            color: #999999;
-        }
-</style>.
+.
 
 <?php
     require "../config/conexion.php";
 
-    $id = $_POST["id"];
-    $nuevo_valor = $_POST["nuevo_valor"];
-    $restante = $_POST["restante"];
+    $nombre = $_POST["nombre"];
+    $ciudad = $_POST["ciudad"];
 
-    $sql_actualizar = "UPDATE pago SET valor_pagado='".$nuevo_valor."', valor_restante='".$restante."' WHERE cod='".$id."' ";
+    $sql_insertar = "INSERT INTO datos 
+        (fecha_sys, nombre, ciudad) 
+    VALUES (now(), '".$nombre."', '".$ciudad."')";
 
-    if($dbh->query($sql_actualizar)) {
+    if($dbh->query($sql_insertar)) {
         echo "<script>
         Swal.fire({
-            title: 'NUEVO VALOR DE PAGO REGISTRADO CORRECTAMENTE',
+            title: 'INSCRIPCION REGISTRADA CORRECTAMENTE',
             icon: 'success',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Aceptar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../Update.html';
+                window.location.href = '../Insert_Ciudades.php';
             }
         });
         </script>";
@@ -31,13 +28,13 @@
         echo "<script>
         Swal.fire({
             title: 'Oops...',
-            text: 'ERROR AL REGISTRAR EL NUEVO VALOR DE PAGO.',
+            text: 'ERROR AL REGISTRAR LOS DATOS.',
             icon: 'error',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Aceptar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../Update.html';
+                window.location.href = '../Insert_Ciudades.php';
             }
         });
         </script>";
