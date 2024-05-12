@@ -1,4 +1,4 @@
-Proyectos Universitarios de HTML, PHP y SQL
+PROYECTOS CORTOS DE HTML, PHP y SQL
 -------------------------------
 
 Este repositorio contiene una colección de mis pequeños proyectos cortos realizados durante mis clases universitarias de HTML, PHP y SQL.
