@@ -13,7 +13,7 @@ Abre el siguiente URL [Oliveer666.github.io](https://oliveer666.github.io/) y se
 
 - Método 2:
 
-Para utilizarlo, simplemente agrega este fragmento a la URL de cualquier archivo HTML: **[https://htmlpreview.github.io/?](https://htmlpreview.github.io/?)**
+Para utilizarlo, simplemente agrega antes este fragmento junto a la URL anterior de cualquier archivo HTML: **[https://htmlpreview.github.io/?](https://htmlpreview.github.io/?)**
 
 Por ejemplo:
 
@@ -22,7 +22,7 @@ https://htmlpreview.github.io/?https://github.com/Oliveer666/Oliveer666.github.i
 Lo que hace es cargar HTML utilizando un proxy CORS, luego procesa todos los enlaces, marcos, scripts y estilos, y los carga usando un proxy CORS, de modo que puedan ser evaluados por el navegador.
 
 
-### Créditos
+## Créditos
 
 Este método de vista previa de HTML en GitHub utiliza [htmlpreview.github.io](https://github.com/htmlpreview/htmlpreview.github.com), desarrollado por [Htmlpreview](https://github.com/htmlpreview).
 
