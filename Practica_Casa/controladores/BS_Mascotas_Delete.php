@@ -4,35 +4,32 @@
 require "../config/conexion.php";
 
 $documento = $_POST["documento"];
-$nombre_dueño = $_POST["nombre_dueño"];
-$nombre_mascota = $_POST["nombre_mascota"];
-$fecha_mascota = $_POST["fecha_mascota"];
 
-$sql_actualizar = "UPDATE mascotas SET nombre_dueño='".$nombre_dueño."', nombre_mascota='".$nombre_mascota."', fecha_mascota='".$fecha_mascota."' WHERE documento='".$documento."' ";
+$sql_eliminar = "DELETE FROM mascotas WHERE documento='".$documento."' ";
 
-if($dbh->query($sql_actualizar)){
+if($dbh->query($sql_eliminar)){
     echo "<script>
         Swal.fire({
-            title: 'INSCRIPCION ACTUALIZADA CORRECTAMENTE',
+            title: 'INSCRIPCION ELIMANDA CORRECTAMENTE',
             icon: 'success',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Aceptar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../Mascotas_Update.html';
+                window.location.href = '../Mascotas_Delete.html';
             }
         });
     </script>";
 }else{
     echo "<script>
         Swal.fire({
-            title: 'ERROR AL ACTUALIZAR LA INSCRIPCION.',
+            title: 'ERROR AL ELIMINAR LA INSCRIPCION.',
             icon: 'error',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Aceptar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../Mascotas_Update.html';
+                window.location.href = '../Mascotas_Delete.html';
             }
         });
     </script>";
