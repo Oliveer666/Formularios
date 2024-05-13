@@ -1,5 +1,5 @@
 <?php
-$database = "mysql:dbname=preparcial;host=127.0.0.1";
+$database = "mysql:dbname=github;host=127.0.0.1";
 $user = "root";
 $pass = "";
 

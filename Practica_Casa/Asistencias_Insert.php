@@ -160,35 +160,32 @@
 <main>
 
     <section class="py-5 text-center container">
-        <div class="row py-lg-5">
+        <div class="row py-lg-3">
             <div class="col-lg-50 col-md-15 mx-auto">
-                <h1 class="fw-light">INICIO WEB</h1>
-                <p class="lead text-body-secondary">Recorre nuestra web y explora los servicios que te ofrecemos a continuación:
+                <h1 class="fw-light">ASISTENCIA A CLASE</h1>
             </div>
         </div>
-        <div class="container ">
-            <div class="nav justify-content-center pb-1 mb-1">
-
-            <div class="col-6 col-md-4 mb-3 ">
-                <div class="footer-widget">
-                    <h4 class="fw-light">Premio mensual de comida para mascotas:<br><br><p class="lead text-body-secondary">¡Inscríbete para tener la oportunidad de ganar comida gratis para tu mascota cada mes!</p></h4>
+        <form class="col-lg-10 col-md-15 mx-auto" method="post" action="controladores/BS_Asistencias_Insert_Post.php">
+            <div class="row">
+                <div class="col">
+                        <label>Nombre de Estudiante</label>
+                        <input type="text" class="form-control" name="nombre_estudiante" required>
                 </div>
-                <p>
-                    <a href="Mascotas_Index.html" class="btn btn-primary my-2">Ir a la pagina</a>
-                </p>
-            </div>
-
-            <div class="col-sm-1"></div>
-
-            <div class="col-6 col-md-4 mb-3">
-                <div class="footer-widget">
-                    <h4 class="fw-light">Registro de asistencia a clases universitarias:<br><br><p class="lead text-body-secondary">Lleva un registro de tus asistencias a clases y talleres para un seguimiento preciso de tu progreso académico.</p></h4>
+                <div class="col col-lg-3">
+                        <label>Semestre</label>
+                        <select class="form-control" name="semestre" required>
+                            <option value="" disabled selected>Selecciona una Opcion</option>
+                            <?php
+                                include "controladores/BS_Asistencias_Insert_Data.php";
+                            ?>
+                        </select>
                 </div>
-                <p>
-                    <a href="Asistencias_Index.html" class="btn btn-primary my-2">Ir a la pagina</a>
-                </p>
             </div>
-        </div>
+            
+            <div class="py-4">
+                <button type="submit" class="btn btn-primary w-100 py-2">Enviar</button>
+            </div>
+        </form>
     </section>
 
 </main>
