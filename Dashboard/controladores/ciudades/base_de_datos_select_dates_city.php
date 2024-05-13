@@ -7,7 +7,7 @@ WHERE 1";
 
 foreach($dbh->query($sql) as $row){
     print "
-    <option value='".$row[0]."'>".$row['ciudad']."</option>
+    <option value='".$row['ciudad']."'>".$row['ciudad']."</option>
     ";
 }
 ?>

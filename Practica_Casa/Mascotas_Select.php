@@ -128,12 +128,13 @@
                     <h5>MASCOTAS</h5>
                 </div>
                 <div class="footer-widget">
-                    <ul>
+                <ul>
                         <li class="nav-item mb-2"><a href="Mascotas_Index.html" class="nav-link p-0 text-body-secondary">Inicio</a></li>
                         <li class="nav-item mb-2"><a href="Mascotas_Insert.html" class="nav-link p-0 text-body-secondary">Insertar</a></li>
                         <li class="nav-item mb-2"><a href="Mascotas_Update.html" class="nav-link p-0 text-body-secondary">Actualizar</a></li>
                         <li class="nav-item mb-2"><a href="Mascotas_Delete.html" class="nav-link p-0 text-body-secondary">Eliminar</a></li>
-                        <li class="nav-item mb-2"><a href="Mascotas_Select.html" class="nav-link p-0 text-body-secondary">Seleccionar</a></li>
+                        <li class="nav-item mb-2"><a href="Mascotas_Select.php" class="nav-link p-0 text-body-secondary">Mostrar</a></li>
+                        <li class="nav-item mb-2"><a href="Mascotas_Filter.php" class="nav-link p-0 text-body-secondary">Filtrar</a></li>
                     </ul>
                 </div>
             </div>
@@ -148,7 +149,8 @@
                         <li class="nav-item mb-2"><a href="Asistencias_Insert.php" class="nav-link p-0 text-body-secondary">Insertar</a></li>
                         <li class="nav-item mb-2"><a href="Asistencias_Update.php" class="nav-link p-0 text-body-secondary">Actualizar</a></li>
                         <li class="nav-item mb-2"><a href="Asistencias_Delete.html" class="nav-link p-0 text-body-secondary">Eliminar</a></li>
-                        <li class="nav-item mb-2"><a href="Asistencias_Select.html" class="nav-link p-0 text-body-secondary">Seleccionar</a></li>
+                        <li class="nav-item mb-2"><a href="Asistencias_Select.php" class="nav-link p-0 text-body-secondary">Mostrar</a></li>
+                        <li class="nav-item mb-2"><a href="Asistencias_Filter.php" class="nav-link p-0 text-body-secondary">Filtrar</a></li>
                     </ul>
                 </div>
             </div>

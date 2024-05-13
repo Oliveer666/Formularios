@@ -162,35 +162,41 @@
 <main>
 
     <section class="py-5 text-center container">
-        <div class="row py-lg-5">
+        <div class="row py-lg-3">
             <div class="col-lg-50 col-md-15 mx-auto">
-                <h1 class="fw-light">INICIO WEB</h1>
-                <p class="lead text-body-secondary">Recorre nuestra web y explora los servicios que te ofrecemos a continuación:
+                <h1 class="fw-light">FILTRO ASISTENCIA A CLASE</h1>
             </div>
         </div>
-        <div class="container ">
-            <div class="nav justify-content-center pb-1 mb-1">
+            <?php 
+            require "config/conexion.php";
 
-            <div class="col-6 col-md-4 mb-3 ">
-                <div class="footer-widget">
-                    <h4 class="fw-light">Premio mensual de comida para mascotas:<br><br><p class="lead text-body-secondary">¡Inscríbete para tener la oportunidad de ganar comida gratis para tu mascota cada mes!</p></h4>
-                </div>
-                <p>
-                    <a href="Mascotas_Index.html" class="btn btn-primary my-2">Ir a la pagina</a>
-                </p>
-            </div>
+            $semestre = $_POST["semestre"];
 
-            <div class="col-sm-1"></div>
+            $sql = "SELECT cod, fecha_sys, nombre_estudiante, semestre
+            FROM asistencia_clases
+            WHERE semestre = '".$semestre."'";
+            #ORDER BY nombre_estudiante ASC";
 
-            <div class="col-6 col-md-4 mb-3">
-                <div class="footer-widget">
-                    <h4 class="fw-light">Registro de asistencia a clases universitarias:<br><br><p class="lead text-body-secondary">Lleva un registro de tus asistencias a clases y talleres para un seguimiento preciso de tu progreso académico.</p></h4>
-                </div>
-                <p>
-                    <a href="Asistencias_Index.html" class="btn btn-primary my-2">Ir a la pagina</a>
-                </p>
-            </div>
-        </div>
+            print "<table style class='table table-bordered table-striped'>
+                <tr>
+                  <td>Cod</td>
+                  <td>Fecha Sys</td>
+                  <td>Nombre Estudiante</td>
+                  <td>Semestre</td>
+                </tr>";
+
+            foreach($dbh->query($sql) as $row){
+                print "
+                <tr>
+                  <td>".$row['cod']."</td>
+                  <td>".$row['fecha_sys']."</td>
+                  <td>".$row['nombre_estudiante']."</td>
+                  <td>".$row['semestre']."</td>
+                </tr>
+                ";
+            }
+            print "</table";
+            ?>
     </section>
 
 </main>

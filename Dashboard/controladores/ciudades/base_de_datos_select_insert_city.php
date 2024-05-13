@@ -1,8 +1,7 @@
-<script src="../js/sweetalert2@11.js"></script>
-.
+<script src="../../js/sweetalert2@11.js"></script>.
 
 <?php
-    require "../config/conexion.php";
+    require "../../config/conexion.php";
 
     $nombre = $_POST["nombre"];
     $ciudad = $_POST["ciudad"];
@@ -20,7 +19,7 @@
             confirmButtonText: 'Aceptar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../Insert_Ciudades.php';
+                window.location.href = '../../Insert_Ciudades.php';
             }
         });
         </script>";
@@ -34,7 +33,7 @@
             confirmButtonText: 'Aceptar'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../Insert_Ciudades.php';
+                window.location.href = '../../Insert_Ciudades.php';
             }
         });
         </script>";
