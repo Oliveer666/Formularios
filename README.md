@@ -24,7 +24,7 @@ Para utilizarlo, simplemente agrega antes este fragmento junto a la URL anterior
 
 Por ejemplo:
 
-https://htmlpreview.github.io/?https://github.com/Oliveer666/Oliveer666.github.io/tree/main/..
+https://htmlpreview.github.io/?https://github.com/Oliveer666/Oliveer666.github.io/blob/main/Index.html
 
 Lo que hace es cargar HTML utilizando un proxy CORS, luego procesa todos los enlaces, marcos, scripts y estilos, y los carga usando un proxy CORS, de modo que puedan ser evaluados por el navegador.
 
