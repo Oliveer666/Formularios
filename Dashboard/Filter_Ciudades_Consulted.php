@@ -278,7 +278,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="Select_Ciudades.php">
+                <a class="nav-link d-flex align-items-center gap-2 active" href="Select_Ciudades.php">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
                     <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"/>
                 </svg>
@@ -286,7 +286,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 active" href="Filter_Ciudades.php">
+                <a class="nav-link d-flex align-items-center gap-2" href="Filter_Ciudades.php">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
                         <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z"/>
                     </svg>
@@ -349,27 +349,43 @@
     </div>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">INICIO</h1>
-      </div>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">FILTRO ASISTENCIA A CLASE</h1>
+    </div>
 
-      <form method="post" action="Filter_Ciudades_Consulted.php">
-          <div>
-          <label>Ciudades</label>
-          <select class="form-control" id="ciudad" name="ciudad" required>
-              <option value="" disabled selected>Selecciona una Opcion</option>
-              <?php
-                  include "controladores/ciudades/base_de_datos_select_dates_city.php";
-              ?>
-          </select>
-          </div><br>
+    <section class="py-1 text-center container">
+        <?php 
+        require "config/conexion.php";
 
-          <div>
-          <input type="submit" value="Guardar" class="form-control">
-          </div>
-      </form>
-    </main>
+        $ciudades = $_POST["ciudad"];
 
+        $sql = "SELECT cod, fecha_sys, nombre, ciudad
+        FROM datos
+        WHERE ciudad = '".$ciudades."'";
+        #ORDER BY nombre_estudiante ASC";
+
+        print "<table style class='table table-bordered table-striped'>
+            <tr>
+                <td>Cod</td>
+                <td>Fecha Sys</td>
+                <td>Nombre</td>
+                <td>Ciudad</td>
+            </tr>";
+
+        foreach($dbh->query($sql) as $row){
+            print "
+            <tr>
+                <td>".$row['cod']."</td>
+                <td>".$row['fecha_sys']."</td>
+                <td>".$row['nombre']."</td>
+                <td>".$row['ciudad']."</td>
+            </tr>
+            ";
+        }
+        print "</table";
+        ?>
+    </section>
+    
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script></body>

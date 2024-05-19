@@ -349,21 +349,24 @@
     </div>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">PAGOS</h1>
-    </div>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">TABLA DE CIUDADES</h1>
+        </div>
 
-    <?php
-        print "<table style class='table table-bordered table-striped form-control'>
-            <tr>
-                <td>Cod</td>
-                <td>Nombre Completo</td>
-                <td>Ciudad</td>
-            </tr>";
-        
-        include "controladores/ciudades/base_de_datos_select_table_city.php";
-        print "</table>";
-    ?>
+        <section class="text-center container">
+            <?php
+                print "<table style class='table table-bordered table-striped'>
+                    <tr>
+                        <td>Cod</td>
+                        <td>Nombre Completo</td>
+                        <td>Ciudad</td>
+                    </tr>";
+                
+                include "controladores/ciudades/base_de_datos_select_table_city.php";
+                print "</table>";
+            ?>
+        </section>
+    </main>
     
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 

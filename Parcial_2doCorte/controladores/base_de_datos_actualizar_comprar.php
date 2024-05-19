@@ -1,6 +1,4 @@
-<script src="../js/sweetalert2@11.js"></script>
-.
-
+<script src="../js/sweetalert2@11.js"></script>.
 <?php
     require "../config/conexion.php";
 

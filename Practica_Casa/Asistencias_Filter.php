@@ -164,7 +164,7 @@
     <section class="py-2 text-center container">
         <div class="row py-lg-3">
             <div class="col-lg-50 col-md-15 mx-auto">
-                <h1 class="fw-light">ASISTENCIA A CLASE</h1>
+                <h1 class="fw-light">FILTRO ASISTENCIA A CLASE</h1>
             </div>
         </div>
         <form class="col-lg-7 col-md-15 mx-auto" method="post" action="Asistencias_Filter_Consulted.php">

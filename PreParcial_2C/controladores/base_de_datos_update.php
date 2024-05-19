@@ -1,10 +1,4 @@
-<script src="../js/sweetalert2@11.js"></script>
-<style>
-        body {
-            color: #999999;
-        }
-</style>.
-
+<script src="../js/sweetalert2@11.js"></script>.
 <?php
 require "../config/conexion.php";
 

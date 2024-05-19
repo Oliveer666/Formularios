@@ -1,5 +1,4 @@
 <script src="../../js/sweetalert2@11.js"></script>.
-
 <?php
     require "../../config/conexion.php";
 

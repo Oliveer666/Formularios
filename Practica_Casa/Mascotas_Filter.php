@@ -164,41 +164,25 @@
     <section class="py-2 text-center container">
         <div class="row py-lg-3">
             <div class="col-lg-50 col-md-15 mx-auto">
-                <h1 class="fw-light">TABLA INSCRIPCION DE MASCOTAS</h1>
+                <h1 class="fw-light">FILTRO INSCRIPCION DE MASCOTAS</h1>
             </div>
         </div>
-        <?php 
-        require "config/conexion.php";
-
-        $sql = "SELECT cod, fecha_sys, documento, nombre_dueño, nombre_mascota, fecha_mascota
-        FROM mascotas
-        WHERE 1";
-        #ORDER BY nombre_estudiante ASC";
-
-        print "<table style class='table table-bordered table-striped'>
-            <tr>
-                <td>Cod</td>
-                <td>Fecha Sys</td>
-                <td>Documento</td>
-                <td>Nombre Dueño</td>
-                <td>Nombre Mascota</td>
-                <td>Fecha Mascota</td>
-            </tr>";
-
-        foreach($dbh->query($sql) as $row){
-            print "
-            <tr>
-                <td>".$row['cod']."</td>
-                <td>".$row['fecha_sys']."</td>
-                <td>".$row['documento']."</td>
-                <td>".$row['nombre_dueño']."</td>
-                <td>".$row['nombre_mascota']."</td>
-                <td>".$row['fecha_mascota']."</td>
-            </tr>
-            ";
-        }
-        print "</table";
-        ?>
+        <form class="col-lg-7 col-md-15 mx-auto" method="post" action="Mascotas_Filter_Consulted.php">
+                <div>
+                    <label>Mes</label>
+                    <select class="form-control" name="mes" required>
+                        <option value="" disabled selected>Selecciona una Opcion</option>
+                        <?php
+                            include "controladores/BS_Mascotas_Insert_Data.php";
+                        ?>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="py-4">
+                <button type="submit" class="btn btn-primary w-100 py-2">Enviar</button>
+            </div>
+        </form>
     </section>
 
 </main>

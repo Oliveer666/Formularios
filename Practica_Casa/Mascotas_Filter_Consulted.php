@@ -164,40 +164,50 @@
     <section class="py-2 text-center container">
         <div class="row py-lg-3">
             <div class="col-lg-50 col-md-15 mx-auto">
-                <h1 class="fw-light">TABLA INSCRIPCION DE MASCOTAS</h1>
+                <h1 class="fw-light">FILTRO INSCRIPCION DE MASCOTAS</h1>
             </div>
         </div>
         <?php 
         require "config/conexion.php";
 
-        $sql = "SELECT cod, fecha_sys, documento, nombre_dueño, nombre_mascota, fecha_mascota
-        FROM mascotas
-        WHERE 1";
-        #ORDER BY nombre_estudiante ASC";
+        $mes = $_POST["mes"];
 
-        print "<table style class='table table-bordered table-striped'>
-            <tr>
-                <td>Cod</td>
-                <td>Fecha Sys</td>
-                <td>Documento</td>
-                <td>Nombre Dueño</td>
-                <td>Nombre Mascota</td>
-                <td>Fecha Mascota</td>
-            </tr>";
+            $sql = "SELECT cod, fecha_sys, documento, nombre_dueño, nombre_mascota, fecha_mascota
+                    FROM mascotas
+                    WHERE MONTH(fecha_sys) = :mes_numero";
 
-        foreach($dbh->query($sql) as $row){
-            print "
-            <tr>
-                <td>".$row['cod']."</td>
-                <td>".$row['fecha_sys']."</td>
-                <td>".$row['documento']."</td>
-                <td>".$row['nombre_dueño']."</td>
-                <td>".$row['nombre_mascota']."</td>
-                <td>".$row['fecha_mascota']."</td>
-            </tr>
-            ";
-        }
-        print "</table";
+            // Preparar la consulta SQL
+            $stmt = $dbh->prepare($sql);
+
+            // Vincular el parámetro :mes_numero con el valor del mes
+            $stmt->bindParam(':mes_numero', $mes, PDO::PARAM_INT);
+
+            // Ejecutar la consulta
+            $stmt->execute();
+
+            print "<table class='table table-bordered table-striped'>
+                <tr>
+                    <td>Cod</td>
+                    <td>Fecha Sys</td>
+                    <td>Documento</td>
+                    <td>Nombre Dueño</td>
+                    <td>Nombre Mascota</td>
+                    <td>Fecha Mascota</td>
+                </tr>";
+
+            // Iterar sobre los resultados y mostrarlos en la tabla
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                print "
+                <tr>
+                    <td>".$row['cod']."</td>
+                    <td>".$row['fecha_sys']."</td>
+                    <td>".$row['documento']."</td>
+                    <td>".$row['nombre_dueño']."</td>
+                    <td>".$row['nombre_mascota']."</td>
+                    <td>".$row['fecha_mascota']."</td>
+                </tr>";
+            }
+            print "</table>";
         ?>
     </section>
 
