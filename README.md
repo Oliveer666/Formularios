@@ -14,23 +14,11 @@ Si intentas abrir la versión en bruto de cualquier archivo HTML, CSS o JS direc
 
 ## ¿COMO VER EL SITIO WEB?
 
-- Método 1:
-
-Abre el siguiente URL [Oliveer666.github.io](https://oliveer666.github.io/) y se mostrará una interfaz desplegando un menú de enlaces a los siguientes proyectos del repositorio.
-
-- Método 2:
-
-Para utilizarlo, simplemente agrega antes este fragmento junto a la URL anterior de cualquier archivo HTML: **[https://htmlpreview.github.io/?](https://htmlpreview.github.io/?)**
-
-Por ejemplo:
-
-https://htmlpreview.github.io/?https://github.com/Oliveer666/Oliveer666.github.io/blob/main/Index.html
-
-Lo que hace es cargar HTML utilizando un proxy CORS, luego procesa todos los enlaces, marcos, scripts y estilos, y los carga usando un proxy CORS, de modo que puedan ser evaluados por el navegador.
-
+Para ver el sitio web, abre el siguiente enlace. Este enlace te dará acceso a los repositorios y a la funcionalidad de la base de datos.
+[Web Online](https://oliv666.000webhostapp.com/)
 
 ## Créditos
 
-Este método de vista previa de HTML en GitHub utiliza [htmlpreview.github.io](https://github.com/htmlpreview/htmlpreview.github.com), desarrollado por [Htmlpreview](https://github.com/htmlpreview).
+Este proyecto utiliza un método de hosting de HTML y SQL desarrollado por [000Webhost](https://www.000webhost.com/).
 
-Este proyecto utiliza [Bootstrap](https://getbootstrap.com/), un marco de trabajo de código abierto para el desarrollo de sitios web y aplicaciones web.
+Este proyecto utiliza [Bootstrap](https://getbootstrap.com/), un framework de código abierto para el desarrollo de sitios web y aplicaciones web.
