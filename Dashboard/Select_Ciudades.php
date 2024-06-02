@@ -354,17 +354,28 @@
         </div>
 
         <section class="text-center container">
-            <?php
-                print "<table style class='table table-bordered table-striped'>
-                    <tr>
-                        <td>Cod</td>
-                        <td>Nombre Completo</td>
-                        <td>Ciudad</td>
-                    </tr>";
-                
-                include "controladores/ciudades/base_de_datos_select_table_city.php";
-                print "</table>";
-            ?>
+            <form method="post" action="Select_Ciudades.php">
+                <div>
+                    <label>Buscar por Nombre</label>
+                    <input type="text" name="buscar" class="form-control">
+                </div><br>
+
+                <div>
+                    <input type="submit" value="Buscar" class="form-control">
+                </div><br>
+
+                <?php
+                    print "<table style class='table table-bordered table-striped'>
+                        <tr>
+                            <td>Cod</td>
+                            <td>Nombre Completo</td>
+                            <td>Ciudad</td>
+                        </tr>";
+                    
+                    include "controladores/ciudades/base_de_datos_select_table_city.php";
+                    print "</table>";
+                ?>
+            </form>
         </section>
     </main>
     
